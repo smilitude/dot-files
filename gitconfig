@@ -1,0 +1,54 @@
+[core]
+excludesfile = ~/.gitignore
+pager        = less -FXRS
+editor       = vi
+
+[pager]
+status = true
+
+[log]
+decorate = auto
+
+[grep]
+lineNumber = true
+
+[merge]
+tool = gvimdiff
+
+[push]
+default = tracking
+
+[clean]
+requireForce = false
+
+[color]
+ui         = auto
+grep       = auto
+
+[color "diff"]
+meta       = white magenta bold
+
+[color "grep"]
+filename   = magenta
+linenumber = green
+match      = red bold
+
+[diff "json"]
+textconv   = "python -mjson.tool"
+
+[alias]
+l        = log
+b        = branch
+co       = checkout
+s        = status
+d        = diff
+dw       = diff --color-words
+dc       = diff --cached
+recommit = commit --amend --reuse-message=HEAD
+g        = grep
+ack      = "grep --break --heading -A3 -B3"
+rmbranch = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
+corebase = "!f(){ git checkout ${1} && git stash && git rebase master && git stash pop; };f"
+rerebase = "!f(){ git stash && git rebase master && git stash pop; };f"
+la       = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+

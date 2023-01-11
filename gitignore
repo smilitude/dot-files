@@ -1,0 +1,11 @@
+# vim files
+*~
+.*.sw[powmn]
+.sw[powmn]
+/Session.vim
+
+# ctags
+tags
+
+# OSX Desktop Service Store files
+.DS_Store
