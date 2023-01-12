@@ -1,3 +1,6 @@
+# disables insecure directy check, see https://stackoverflow.com/a/61433333
+ZSH_DISABLE_COMPFIX=true
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -133,6 +136,3 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 
 # for rust
 source "$HOME/.cargo/env"
-
-# disables insecure directy check, see https://stackoverflow.com/a/61433333
-ZSH_DISABLE_COMPFIX=true
