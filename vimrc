@@ -19,7 +19,7 @@ call vundle#begin()
 " install command.
 " Write :h vundle for help.
 " TODO: document them
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
